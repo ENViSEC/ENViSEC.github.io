@@ -1,5 +1,5 @@
 Apply Access
-=====
+===============
 
 A login is required to access the HPC cluster of the University. 
 Use your student or employee email address of the university to sign up for the account.
