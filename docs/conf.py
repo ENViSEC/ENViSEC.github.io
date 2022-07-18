@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'HPC of KUC'
+project = 'Kristiania-HPC'
 copyright = '2022, Kristiania University College'
 author = 'Guru Prasad Bhandari'
 
