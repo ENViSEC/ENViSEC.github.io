@@ -1,6 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
+import sphinx_theme
+
 
 project = 'Kristiania-HPC'
 copyright = '2022, Kristiania University College'
@@ -30,6 +32,21 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
+# html_theme = 'renku'
+# html_theme = 'nature'
+# html_theme = 'stanford_theme'
+# html_theme_path = [sphinx_theme.get_html_theme_path('stanford-theme')]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+html_logo = 'images/logo.png'
+
+html_theme_options = {
+    'logo_only': False,
+    'display_version': False,
+    'prev_next_buttons_location': 'both',
+    # 'style_external_links': True,
+    # 'style_nav_header_background': '#f5f',
+    # 'github_url': 'https://kristiania-hpc.github.io/',
+}
