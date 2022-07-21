@@ -45,7 +45,7 @@ html_logo = 'images/logo.png'
 html_theme_options = {
     'logo_only': False,
     'display_version': False,
-    'prev_next_buttons_location': 'both',
+    # 'prev_next_buttons_location': 'both',
     # 'style_external_links': True,
     # 'style_nav_header_background': '#f5f',
     # 'github_url': 'https://kristiania-hpc.github.io/',
