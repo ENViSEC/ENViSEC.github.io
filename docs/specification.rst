@@ -2,6 +2,7 @@ Specifications
 =====================
 
 .. _Hardware:
+
 Hardware
 -------------------------
 
@@ -12,11 +13,11 @@ Hardware
 | GPU-computing upgrade possible without replacing the node.
 | Top of rack switches
 
-**Software and License**
+.. **Software and License**
 
-| One-time 155.000NOK
-| VMware vSphere Standard 4 nodes
-| VMware SAN Advanced 4 nodes
+.. | One-time 155.000NOK
+.. | VMware vSphere Standard 4 nodes
+.. | VMware SAN Advanced 4 nodes
 
 .. **Operational running costs**
 

@@ -5,7 +5,7 @@ The following are the available equipment in addition to the HPC cluster (see :r
 The interested user can request to the respective laboratory/center for access to the specified equipment.
 
 
-.. csv-table:: Special equipment with SmartSecLab**
+.. csv-table:: **Special equipment with SmartSecLab**
    :file: ../table/smartseclab-equip.csv
    :delim: ;
    :widths: 15,  15, 15
