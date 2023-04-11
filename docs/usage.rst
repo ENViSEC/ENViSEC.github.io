@@ -1,13 +1,16 @@
 Usage
 =====
 
-.. _installation:
+.. _Installation:
 
 Installation
 ------------
 
 TBA
 
+
+.. autosummary::
+   :toctree: generated
 
 
 

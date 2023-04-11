@@ -1,7 +1,9 @@
 Specifications
-=========================
+=====================
 
-**Hardware**
+.. _Hardware:
+Hardware
+-------------------------
 
 | AMD 32-core CPU, total 128 cores.
 | 1024GB RAM.
@@ -16,12 +18,12 @@ Specifications
 | VMware vSphere Standard 4 nodes
 | VMware SAN Advanced 4 nodes
 
-**Operational running costs**
+.. **Operational running costs**
 
-| VMware: 75.000NOK
-| Windows Datacentre: 52.000NOK
-| Colocation at Digiplex: 162.000NOK
-| Total: 289.000NOK per year
+.. | VMware: 75.000NOK
+.. | Windows Datacentre: 52.000NOK
+.. | Colocation at Digiplex: 162.000NOK
+.. | Total: 289.000NOK per year
 
 
 .. autosummary::
