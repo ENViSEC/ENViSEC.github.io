@@ -24,11 +24,11 @@ ALLSPHINXLIVEOPTS   = $(ALLSPHINXOPTS) -q \
    --watch source
 
 
-hello: 
-   @echo "update"
+update:
+	@echo "Updating the information of equipment of SEIT..."; \
    python3 test.py
-
    
+
 .PHONY: livehtml
 livehtml:
 	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

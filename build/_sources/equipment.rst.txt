@@ -16,13 +16,15 @@ The interested user can request to the respective laboratory/center for access t
 Contact person: Andrii Shalaginov
 
 
-**2. lab: Special equipment (to be completed)**
+**2. ..lab: Special equipment (to be completed)**
 
 .. csv-table:: 
    :file: ../table/motel-equip.csv
-   :widths: 30,  10, 20
-   :header-rows: 1
    :delim: ;
+   :widths: auto
+   :header-rows: 1
+   :align: left
+   
      
 .. autosummary::
    :toctree: generated
