@@ -15,7 +15,8 @@ The interested user can request to the respective laboratory/center for access t
 
 Contact person: Andrii Shalaginov
 
-**2. Special equipment with .. laboratory**
+
+**2. lab: Special equipment (to be completed)**
 
 .. csv-table:: 
    :file: ../table/motel-equip.csv

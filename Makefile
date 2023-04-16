@@ -23,6 +23,14 @@ ALLSPHINXLIVEOPTS   = $(ALLSPHINXOPTS) -q \
    --ignore "*.tex" \
    --watch source
 
+
+hello: 
+   @echo "update"
+   python3 test.py
+
+   
 .PHONY: livehtml
 livehtml:
 	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+
