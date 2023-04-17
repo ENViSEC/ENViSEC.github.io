@@ -10,7 +10,13 @@ def excel2csv(inputfile, csvfile):
     df.insert(loc=0, column='SN', value=df['index'] + 1)
     df = df.drop(columns=['index'])
     df =df.reset_index(drop=True).dropna(axis=1, how='all')
-    df.to_csv(csvfile, sep =';', index=False)
+    df.to_csv(path_or_buf=csvfile, 
+              sep =';', 
+              encoding='utf-8', 
+              quotechar='`',
+              doublequote=True,
+              index=False, 
+              )
     return df
 
 
