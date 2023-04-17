@@ -26,7 +26,7 @@ ALLSPHINXLIVEOPTS   = $(ALLSPHINXOPTS) -q \
 
 update:
 	@echo "Updating the information of equipment of SEIT..."; \
-   python3 test.py
+   python3 update.py
    
 
 .PHONY: livehtml
