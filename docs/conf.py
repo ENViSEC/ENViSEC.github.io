@@ -5,7 +5,7 @@ import sphinx_theme
 
 
 project = 'Kristiania-HPC'
-copyright = '2023, SEIT, Kristiania University College'
+copyright = '2024, SEIT, Kristiania University College'
 author = 'Guru Prasad Bhandari'
 
 release = '0.1'
