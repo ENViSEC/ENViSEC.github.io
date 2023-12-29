@@ -20,13 +20,20 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx_rtd_theme',
+    'myst_parser',
 ]
 
 
-html_theme = 'sphinx_rtd_theme'
-# html_logo = 'images/logo.png'
+# html_theme = 'sphinx_rtd_theme'
+# # html_logo = 'images/logo.png'
 
-html_theme_options = {
-    'logo_only': False,
-    'display_version': False
+# html_theme_options = {
+#     'logo_only': False,
+#     'display_version': False
+# }
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
 }

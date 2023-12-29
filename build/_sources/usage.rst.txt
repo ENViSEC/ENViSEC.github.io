@@ -1,0 +1,64 @@
+Usage
+=====
+
+.. _Installation:
+
+Getting Started Guide:
+------------------------
+
+Before you begin, make sure you have the following:
+
+- Access to an HPC cluster with Slurm installed.
+- Basic knowledge of Linux command-line operations.
+  
+
+Slurm scheduler:
+----------------
+Slurm operates on the concept of jobs, nodes, and partitions. Familiarize yourself with these key terms:
+
+- **Job**: A computational task submitted to the cluster.
+- **Node**: A computing resource that performs tasks as part of a job.
+- **Partition**: A logical division of the cluster resources.
+
+Connecting to the HPC Cluster
+------------------------------
+
+Use SSH to connect to the HPC cluster:
+
+
+ssh username@hpc-cluster.example.com
+
+Replace username with your username and hpc-cluster.example.com with the actual address of your HPC cluster.
+
+To submit a job using the `sbatch` command followed by the script file
+   
+sbatch script.sh
+The `script.sh` is the name of your shell script which contains the commands for your job.
+The output will provide a unique job ID (e.g., 12345678). You can view more information about
+your job using the `squeue` command::
+
+.. code-block:: python
+
+   #!/usr/bin/env python
+   # -*- coding: utf-8 -*-
+
+   def main():
+       """The main function."""
+       print("Hello, World!")
+
+   if __name__ == "__main__":
+       main()
+
+
+
+Installation
+------------
+
+TBA
+
+
+.. autosummary::
+   :toctree: generated
+
+
+
