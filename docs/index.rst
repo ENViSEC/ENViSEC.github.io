@@ -1,8 +1,8 @@
 High Performance Computing platform of Kristiania!
 ==================================================
 
-Welcome to the HPC cluster of Kristiania!
-------------------------------------------
+Welcome to the HPC cluster!
+---------------------------
 
 The High Performance Computing (HPC) platform at Kristiania University
 College provides students and researchers with the resources they need
