@@ -1,10 +1,6 @@
-Specifications
-=====================
+# Specifications
 
-.. _Hardware:
-
-Hardware
--------------------------
+## Hardware
 
 | AMD 32-core CPU, total 128 cores.
 | 1024GB RAM.
@@ -13,8 +9,7 @@ Hardware
 | GPU-computing upgrade possible without replacing the node.
 | Top of rack switches
 
+![HPC-front](images/hpc-front.png)
 
 .. autosummary::
-   :toctree: generated
-
-   
+:toctree: generated

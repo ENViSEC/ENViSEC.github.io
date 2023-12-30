@@ -1,4 +1,4 @@
-# Getting Started Guide:
+# Getting Started:
 
 Before you begin, make sure you have the following:
 
@@ -185,5 +185,5 @@ You can also use the `scontrol` command to view information about the jobs runni
 
 - To gain in-depth knowledge on utilizing an HPC cluster in conjunction with the SLURM scheduler, consider following the introductory carpentry training tutorials. This tutorial provides comprehensive guidance on effectively navigating and leveraging the capabilities of an HPC environment, particularly focusing on the SLURM job scheduler, Link: [Introduction to High-Performance Computing](https://carpentries-incubator.github.io/hpc-intro/).
 
-  .. autosummary::
-  :toctree: generated
+.. autosummary::
+:toctree: generated
