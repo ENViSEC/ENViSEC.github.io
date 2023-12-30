@@ -7,7 +7,7 @@ Users interested in utilizing this equipment can request access to the specific 
 **1. SmartSecLab lab equipment**
 
 .. csv-table::
-   :file: ../table/smartseclab-equip.csv
+   :file: ../table/SmartSecLab-equipment.csv
    :delim: ;
    :widths: auto
    :header-rows: 1
