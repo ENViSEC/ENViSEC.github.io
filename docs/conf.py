@@ -23,3 +23,12 @@ source_suffix = {
     '.txt': 'markdown',
     '.md': 'markdown',
 }
+
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'collapse_navigation': False,
+    'display_version': True,
+    'navigation_depth': 3,
+    'includehidden': True,
+    'titles_only': False,
+}

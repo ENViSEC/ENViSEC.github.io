@@ -16,12 +16,12 @@ HPC usage using Slurm.
 
 .. image:: images/hpc-back.png
     :alt: HPC cluster
-    :width: 300
+    :width: 250
     :height: 300
 
 .. image:: images/hpc-front.png
     :alt: HPC cluster
-    :width: 300
+    :width: 250
     :height: 300
 
 .. Note::
