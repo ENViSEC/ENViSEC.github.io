@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; Kristiania-HPC 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=e031e9a9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Storage" href="storage.html" />
+    <link rel="prev" title="Specifications" href="specification.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
+<p>Before you begin, make sure you have the following:</p>
+<ul class="simple">
+<li><p>Access to an HPC cluster with Slurm installed.</p></li>
+<li><p>Basic knowledge of Linux command-line operations.</p></li>
+</ul>
+<section id="slurm-scheduler">
+<h2>Slurm scheduler<a class="headerlink" href="#slurm-scheduler" title="Permalink to this heading">¶</a></h2>
+<p>Simple Linux Utility for Resource Management (SLURM) is commonly used for job scheduling
+and resource management on high-performance computing (HPC) clusters. Slurm operates on
+the concept of jobs, nodes, and partitions. Familiarize yourself with these key terms:</p>
+<ul class="simple">
+<li><p><strong>Job</strong>: A computational task submitted to the cluster.</p></li>
+<li><p><strong>Node</strong>: A computing resource that performs tasks as part of a job.</p></li>
+<li><p><strong>Partition</strong>: A logical division of the cluster resources.</p></li>
+</ul>
+</section>
+<section id="connecting-to-the-hpc-cluster">
+<h2>Connecting to the HPC Cluster<a class="headerlink" href="#connecting-to-the-hpc-cluster" title="Permalink to this heading">¶</a></h2>
+<p>Use SSH to connect to the HPC cluster:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="nd">@hpc</span><span class="o">-</span><span class="n">cluster</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">username</span></code> with your username and hpc-cluster.example.com with the actual
+address of your HPC cluster.</p>
+</section>
+<section id="submitting-a-job">
+<h2>Submitting a Job<a class="headerlink" href="#submitting-a-job" title="Permalink to this heading">¶</a></h2>
+<p>To submit a job using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command followed by the script file, run the command as-</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">script</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">script.sh</span></code> is the name of your shell script. The script should include the commands
+necessary for running your analysis or simulation.</p>
+<p>The output will provide a unique job ID (e.g., 12345678). You can view more information about
+your job using the <code class="docutils literal notranslate"><span class="pre">squeue</span></code> command::</p>
+</section>
+<section id="example-of-slurm-script">
+<h2>Example of slurm script<a class="headerlink" href="#example-of-slurm-script" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=my_mpi_job          # Job name</span>
+<span class="c1">#SBATCH --partition=LocalQ             # Partition to submit to</span>
+<span class="c1">#SBATCH --output=output.%j             # Output file name (%j expands to jobID)</span>
+<span class="c1">#SBATCH --error=error.%j               # Error file name (%j expands to jobID)</span>
+<span class="c1">#SBATCH --ntasks=4                     # Number of tasks (MPI processes)</span>
+<span class="c1">#SBATCH --nodes=1                      # Number of nodes</span>
+<span class="c1">#SBATCH --ntasks-per-node=4            # Number of tasks per node</span>
+<span class="c1">#SBATCH --time=00:10:00                # Walltime (hh:mm:ss)</span>
+
+<span class="c1"># Load available modules if you require any</span>
+<span class="n">module</span> <span class="n">load</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+
+<span class="c1"># Run your program here</span>
+<span class="n">python3</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This is a basic example, and you may need to customize it according to your specific needs,
+such as adjusting resource requirements, module loading, and paths.
+You can specify the following parameters in your slurm script.</p>
+<p><strong>–job-name=<name></strong>: Specifies a name for the job. This name will be used in identifying
+the job in the queue and in the output and error files.</p>
+<p><strong>–output=<filename></strong>: Specifies the name of the file where the standard output of the job
+will be written. You can use <code class="docutils literal notranslate"><span class="pre">%j</span></code> in the filename, and SLURM will replace it with the job ID.</p>
+<p><strong>–error=<filename></strong>: Specifies the name of the file where the standard error of the job
+will be written. Like <code class="docutils literal notranslate"><span class="pre">--output</span></code>, <code class="docutils literal notranslate"><span class="pre">%j</span></code> can be used in the filename.</p>
+<p><strong>–partition=&lt;partition_name&gt;</strong>: Specifies the name of the partition or queue to which
+the job should be submitted. Partitions are used to group nodes with similar characteristics.</p>
+<p><strong>–ntasks=<number></strong>: Specifies the total number of tasks (or processes) to be run.
+This is often used in parallel computing with MPI.</p>
+<p><strong>–nodes=<number></strong>: Specifies the number of nodes requested for the job. If not specified,
+SLURM may allocate the tasks across nodes as needed.</p>
+<p><strong>–ntasks-per-node=<number></strong>: Specifies the number of tasks (or processes) to be run per node.</p>
+<p><strong>–cpus-per-task=<number></strong>: Specifies the number of CPU cores to allocate per task.
+This can be used to control the number of threads per task.</p>
+<p><strong>–time=<time></strong>: Specifies the maximum wall-clock time for the job to run.
+The format is <code class="docutils literal notranslate"><span class="pre">days-hours:minutes:seconds</span></code>.</p>
+<p><strong>–mem=<memory></strong>: Specifies the total memory required for the job.
+The format is in megabytes (M), gigabytes (G), etc.</p>
+<p><strong>–mail-type=<type></strong>: Specifies the type of email notifications to receive.
+Types include <code class="docutils literal notranslate"><span class="pre">BEGIN</span></code>, <code class="docutils literal notranslate"><span class="pre">END</span></code>, <code class="docutils literal notranslate"><span class="pre">FAIL</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p>
+<p><strong>–mail-user=&lt;email_address&gt;</strong>: Specifies the email address to which notifications will be sent.</p>
+<p><strong>–dependency=<a class="reference external" href="type:jobid">type:jobid</a></strong>: Specifies a job dependency, meaning the current
+job will not start until the specified job (identified by job ID) completes successfully.</p>
+</section>
+<section id="basic-slurm-commands">
+<h2>Basic slurm commands<a class="headerlink" href="#basic-slurm-commands" title="Permalink to this heading">¶</a></h2>
+<p>You can check the status of all jobs with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span> <span class="o">-</span><span class="n">u</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">username</span></code> with your username. You can also view the status of your job using the <code class="docutils literal notranslate"><span class="pre">sacct</span></code> command::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sacct</span> <span class="o">-</span><span class="n">j</span> <span class="mi">12345678</span>
+</pre></div>
+</div>
+<p>Replace 12345678 with your job ID. Once your job is complete, you will receive
+an email notification.
+You can also check the output of your job in the <code class="docutils literal notranslate"><span class="pre">slurm-12345678.out</span></code> file.
+Replace 12345678 with your job ID.</p>
+<p>You can interact with a running job using the <code class="docutils literal notranslate"><span class="pre">srun</span></code> command::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">jobid</span> <span class="mi">12345678</span> <span class="o">--</span><span class="n">pty</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<p>Replace 12345678 with your job ID. This will open a new terminal session on
+the node where your job is running.
+You can use this terminal session to run commands on the node.
+To exit the terminal session, type <code class="docutils literal notranslate"><span class="pre">exit</span></code>.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scancel</span></code> command to cancel a running job::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scancel</span> <span class="mi">12345678</span>
+</pre></div>
+</div>
+<p>Replace 12345678 with your job ID. This will cancel your job and terminate
+all processes associated with it.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view more information about your job::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">job</span> <span class="mi">12345678</span>
+</pre></div>
+</div>
+<p>Replace 12345678 with your job ID. This will display detailed information about your job.
+You can also use the <code class="docutils literal notranslate"><span class="pre">sinfo</span></code> command to view information about the nodes on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sinfo</span>
+</pre></div>
+</div>
+<p>This will display information about the nodes on the cluster, including the number of nodes,
+the number of CPUs per node, and the number of GPUs per node.
+You can also use the <code class="docutils literal notranslate"><span class="pre">smap</span></code> command to view information about the memory usage on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smap</span>
+</pre></div>
+</div>
+<p>This will display information about the memory usage on the cluster,
+including the total memory, the memory used, and the memory available.
+You can also use the <code class="docutils literal notranslate"><span class="pre">sview</span></code> command to view information about the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sview</span>
+</pre></div>
+</div>
+<p>This will display a graphical view of the cluster, including the nodes,
+the partitions, and the jobs running on the cluster.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about
+the partitions on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">partition</span>
+</pre></div>
+</div>
+<p>This will display information about the partitions on the cluster, including the number of nodes,
+the number of CPUs per node, and the number of GPUs per node.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the jobs running on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">job</span>
+</pre></div>
+</div>
+<p>This will display information about the jobs running on the cluster, including the job ID,
+the job name, the job status, and the job owner.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the nodes on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">node</span>
+</pre></div>
+</div>
+<p>This will display information about the nodes on the cluster, including the node name,
+the node status, and the node owner.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the users on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>This will display information about the users on the cluster, including the user name,
+the user status, and the user owner.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the partitions on the cluster::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">partition</span>
+</pre></div>
+</div>
+<p>This will display information about the partitions on the cluster, including the partition name,
+the partition status, and the partition owner.
+You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the jobs running on the cluster::</p>
+</section>
+<section id="for-additional-tutorials">
+<h2>For additional tutorials<a class="headerlink" href="#for-additional-tutorials" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>To gain in-depth knowledge on utilizing an HPC cluster in conjunction with
+the SLURM scheduler, consider following the introductory carpentry training tutorials.
+This tutorial provides comprehensive guidance on effectively navigating and
+leveraging the capabilities of an HPC environment, particularly focusing on
+the SLURM job scheduler,
+Link: <a class="reference external" href="https://carpentries-incubator.github.io/hpc-intro/">Introduction to High-Performance Computing</a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Kristiania-HPC</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="specification.html">Specifications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#slurm-scheduler">Slurm scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-the-hpc-cluster">Connecting to the HPC Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submitting-a-job">Submitting a Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-of-slurm-script">Example of slurm script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-slurm-commands">Basic slurm commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-additional-tutorials">For additional tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access.html">Apply Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipment.html">SEIT equipment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Us</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="specification.html" title="previous chapter">Specifications</a></li>
+      <li>Next: <a href="storage.html" title="next chapter">Storage</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, SEIT, Kristiania University College.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usage.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

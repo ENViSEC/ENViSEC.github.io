@@ -1,8 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
 # -- Project information
-import sphinx_theme
-
-
 project = 'Kristiania-HPC'
 copyright = '2024, SEIT, Kristiania University College'
 author = 'Guru Prasad Bhandari'
@@ -16,7 +13,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    "sphinx.ext.napoleon",
     'sphinx_rtd_theme',
     'myst_parser',
 ]

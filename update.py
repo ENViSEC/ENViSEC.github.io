@@ -8,8 +8,10 @@ def excel2csv(inputfile, csvfile):
     df = df.rename(columns={'index': 'Equipment'})
     df = df.reset_index()
     df.insert(loc=0, column='SN', value=df['index'] + 1)
-    df = df.drop(columns=['index'])
+    df = df.drop(
+        columns=['index'])
     df = df.reset_index(drop=True).dropna(axis=1, how='all')
+    df = df[['Equipment', 'Long_name', 'Quantity', 'Applications']]
     df.to_csv(path_or_buf=csvfile,
               sep=';',
               encoding='utf-8',
