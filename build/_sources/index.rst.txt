@@ -12,8 +12,10 @@ distribute computing resources on an HPC cluster.
 This guide will walk you through the basics of getting started with 
 HPC usage using Slurm.
 
-![HPC-back](images/hpc-back.png)
-
+.. image:: images/hpc-back.png
+   :width: 400
+   :height: 300
+   :align: center
 
 .. note::
 

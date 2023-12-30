@@ -14,7 +14,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started:" href="usage.html" />
+    <link rel="next" title="Getting Started" href="usage.html" />
     <link rel="prev" title="High Performance Computing platform of Kristiania University College!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -36,13 +36,41 @@
 <h1>Specifications<a class="headerlink" href="#specifications" title="Permalink to this heading">¶</a></h1>
 <section id="hardware">
 <h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading">¶</a></h2>
-<p>| AMD 32-core CPU, total 128 cores.
-| 1024GB RAM.
-| 40TB usable flash storage for virtual machines.
-| 145TB storage for data.
-| GPU-computing upgrade possible without replacing the node.
-| Top of rack switches</p>
-<p><img alt="HPC-front" src="_images/hpc-front.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Specification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Compute Nodes</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Processor</p></td>
+<td><p>4 x AMD Epyc 64-core CPU in each node</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory</p></td>
+<td><p>256 GB DDR4 RAM in each node (1 TB total)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage</p></td>
+<td><p>16 TB SSD for in each node, 175 TB for storage</p></td>
+</tr>
+<tr class="row-even"><td><p>Networking</p></td>
+<td><p>10Gigabit Ethernet per compute node</p></td>
+</tr>
+<tr class="row-odd"><td><p>OS</p></td>
+<td><p>Ubuntu Server LTS 22 with Kernel 5.4+ 0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GPU Nodes</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Currently unavailable, with plans to incorporate in the future.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The front-end of our HPC cluster looks as-
+<img alt="HPC-front" src="_images/hpc-front.png" /></p>
 <p>.. autosummary::
 :toctree: generated</p>
 </section>
@@ -70,12 +98,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Getting Started:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="storage.html">Files and Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="access.html">Apply Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="equipment.html">Additional SEIT equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications featuring Kristiania-HPC Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipment.html">SEIT equipment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Us</a></li>
 </ul>
 
 <div class="relations">
@@ -83,7 +112,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">High Performance Computing platform of Kristiania University College!</a></li>
-      <li>Next: <a href="usage.html" title="next chapter">Getting Started:</a></li>
+      <li>Next: <a href="usage.html" title="next chapter">Getting Started</a></li>
   </ul></li>
 </ul>
 </div>

@@ -2,11 +2,11 @@
 
 At Kristiania's HPC-unit, we are dedicated to providing cutting-edge High-Performance Computing (HPC) resources and support for researchers, scientists, and innovators. Our state-of-the-art infrastructure is designed to empower and accelerate computational research across various disciplines.
 
-## Our Mission:
+## Our Mission
 
 Our mission is to foster scientific discovery and innovation by offering a robust and efficient computing environment. We strive to be a catalyst for groundbreaking research and contribute to advancements that address complex challenges.
 
-## What Sets Us Apart:
+## What Sets Us Apart
 
 Advanced Infrastructure: Our HPC center boasts a high-performance computing cluster equipped with the latest technologies to meet the diverse computational needs of our users.
 
@@ -25,7 +25,8 @@ Advanced Infrastructure: Our HPC center boasts a high-performance computing clus
 
 Whether you are a seasoned researcher or just starting in the world of high-performance computing, Kristiania-HPC welcomes you. Explore our resources, engage with our community, and leverage the power of HPC to propel your research forward.
 
-Contact Us:
+## Contact Us
+
 Have questions or need assistance? Feel free to reach out to our team at hpc@kristiania.no . We are here to support your journey in high-performance computing.
 
 Thank you for choosing Kristiania-HPC. Together, let's push the boundaries of computational research!

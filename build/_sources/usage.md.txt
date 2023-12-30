@@ -1,11 +1,11 @@
-# Getting Started:
+# Getting Started
 
 Before you begin, make sure you have the following:
 
 - Access to an HPC cluster with Slurm installed.
 - Basic knowledge of Linux command-line operations.
 
-## Slurm scheduler:
+## Slurm scheduler
 
 Simple Linux Utility for Resource Management (SLURM) is commonly used for job scheduling and resource management on high-performance computing (HPC) clusters. Slurm operates on the concept of jobs, nodes, and partitions. Familiarize yourself with these key terms:
 
@@ -36,7 +36,7 @@ where `script.sh` is the name of your shell script. The script should include th
 The output will provide a unique job ID (e.g., 12345678). You can view more information about
 your job using the `squeue` command::
 
-## Example of slurm script:
+## Example of slurm script
 
 ```
 #!/bin/bash
@@ -181,7 +181,7 @@ scontrol show partition
 This will display information about the partitions on the cluster, including the partition name, the partition status, and the partition owner.
 You can also use the `scontrol` command to view information about the jobs running on the cluster::
 
-## For additional tutorials:
+## For additional tutorials
 
 - To gain in-depth knowledge on utilizing an HPC cluster in conjunction with the SLURM scheduler, consider following the introductory carpentry training tutorials. This tutorial provides comprehensive guidance on effectively navigating and leveraging the capabilities of an HPC environment, particularly focusing on the SLURM job scheduler, Link: [Introduction to High-Performance Computing](https://carpentries-incubator.github.io/hpc-intro/).
 

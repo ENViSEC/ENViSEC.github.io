@@ -1,4 +1,4 @@
-Additional SEIT equipment
+SEIT equipment
 =========================
 
 The following are the additional available equipment in addition to the HPC cluster (see :ref:Hardware) at SEIT, Kristiania. 
