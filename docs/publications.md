@@ -9,6 +9,3 @@ If you publish research utilizing the Kristiania-HPC infrastructure, kindly info
 ## Research Papers
 
 - TBA
-
-  .. autosummary::
-  :toctree: generated

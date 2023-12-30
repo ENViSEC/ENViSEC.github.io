@@ -1,5 +1,10 @@
 # Specifications
 
+The HPC website serves as a centralized platform to provide information, resources,
+and support for users accessing our High-Performance Computing cluster.
+This specification outlines the key features, functionality, and design
+considerations of the Kristiania-HPC cluster.
+
 ## Hardware
 
 | Component         | Specification                                                   |
@@ -12,9 +17,3 @@
 | OS                | Ubuntu Server LTS 22 with Kernel 5.4+ 0                         |
 | **GPU Nodes**     |                                                                 |
 | -                 | Currently unavailable, with plans to incorporate in the future. |
-
-The front-end of our HPC cluster looks as-
-![HPC-front](images/hpc-front.png)
-
-.. autosummary::
-:toctree: generated

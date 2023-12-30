@@ -43,8 +43,3 @@ The project directory is a shared space designed for collaborative projects invo
 **Access Control**: Access to the project directory is granted to all approved project members, allowing collaborative work.
 
 **Backup**: The HPC unit has implemented RAID-5 to safeguard data against potential damage caused by the failure of a single disk. Otherwise, routine backups are intended to protect their project data and ensure its recoverability from the respective project teams.
-
-### Access Control List (ACL)
-
-.. autosummary::
-:toctree: generated

@@ -1,5 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-
 # -- Project information
 import sphinx_theme
 
@@ -7,7 +6,6 @@ import sphinx_theme
 project = 'Kristiania-HPC'
 copyright = '2024, SEIT, Kristiania University College'
 author = 'Guru Prasad Bhandari'
-
 release = '0.1'
 version = '0.1.0'
 
