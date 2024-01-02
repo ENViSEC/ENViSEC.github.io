@@ -91,10 +91,12 @@
 <li class="toctree-l1"><a class="reference internal" href="specification.html">Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage.html">Storage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Apply Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#accessing-resources-on-and-off-campus">Accessing Resources On and Off Campus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#on-campus-connectivity">On-Campus Connectivity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#off-campus-connectivity">Off-Campus Connectivity</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Apply Access</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-resources-on-and-off-campus">Accessing Resources On and Off Campus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#on-campus-connectivity">On-Campus Connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#off-campus-connectivity">Off-Campus Connectivity</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="equipment.html">SEIT equipment</a></li>
@@ -176,12 +178,11 @@ Use your student or employee email address of the university to sign up for the 
 <li><p>Fill the <a class="reference external" href="https://forms.office.com/pages/designpagev2.aspx?auth_pvr=OrgId&amp;amp;auth_upn=gubh001%40EGMS.no&amp;amp;lang=en&amp;amp;origin=OfficeDotCom&amp;amp;route=Start&amp;amp;sessionid=f3f5ab85-19bc-4710-9dc5-70ca535ec4bb&amp;amp;subpage=design&amp;amp;id=xCax_z0GEkuaCchqSOHpWvCwNBkDNKNFqP_ksrHs5v5UODVVWFk2VkkzSExGTTdHS0RRMVRTTk5YQS4u&amp;amp;topview=Preview">Application Form</a>.</p></li>
 <li><p>Feel free to reach out to us via email at <code class="docutils literal notranslate"><span class="pre">hpc&#64;kristiania.no</span></code> to request HPC special access for a project, need additional storage access, or require dedicated execution time on a node.</p></li>
 </ul>
-</div>
 <div class="section" id="accessing-resources-on-and-off-campus">
-<h1>Accessing Resources On and Off Campus<a class="headerlink" href="#accessing-resources-on-and-off-campus" title="Permalink to this heading">¶</a></h1>
+<h2>Accessing Resources On and Off Campus<a class="headerlink" href="#accessing-resources-on-and-off-campus" title="Permalink to this heading">¶</a></h2>
 <p>In order to seamlessly utilize resources, whether on or off campus, it is essential to understand the distinct methods for connectivity.</p>
 <div class="section" id="on-campus-connectivity">
-<h2>On-Campus Connectivity<a class="headerlink" href="#on-campus-connectivity" title="Permalink to this heading">¶</a></h2>
+<h3>On-Campus Connectivity<a class="headerlink" href="#on-campus-connectivity" title="Permalink to this heading">¶</a></h3>
 <p>When physically present within the campus premises and connected to either the <code class="docutils literal notranslate"><span class="pre">EGMS</span></code> or <code class="docutils literal notranslate"><span class="pre">Student</span></code> network, you can effortlessly access High-Performance Computing (HPC) resources. Specifically, a direct Secure Shell (SSH) connection to the HPC login node can be established using the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;@</span><span class="mf">10.10.15.10</span><span class="o">&gt;</span>
 </pre></div>
@@ -189,7 +190,7 @@ Use your student or employee email address of the university to sign up for the 
 <p>Here, the IP address 10.10.15.10 corresponds to the IP/hostname of the HPC login node.</p>
 </div>
 <div class="section" id="off-campus-connectivity">
-<h2>Off-Campus Connectivity<a class="headerlink" href="#off-campus-connectivity" title="Permalink to this heading">¶</a></h2>
+<h3>Off-Campus Connectivity<a class="headerlink" href="#off-campus-connectivity" title="Permalink to this heading">¶</a></h3>
 <p>When operating from a remote location, accessing resources off campus requires specific procedures. Here are the guidelines for both students and employees:The off-campus VPN (Virtual Private Network) provides secure connectivity from anywhere in the world. To use this service:</p>
 <p><strong>For students:</strong></p>
 <ul class="simple">
@@ -209,6 +210,7 @@ Click ‘connect’</p></li>
 4 to 6 same as student.</p></li>
 </ul>
 <p>Notes: Linux user, follow the instruction: https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux.</p>
+</div>
 </div>
 </div>
 
