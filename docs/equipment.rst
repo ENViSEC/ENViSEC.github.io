@@ -53,7 +53,7 @@ Contact person: Moutaz Haddara
    :align: left
 
 Contact person: Kjetil Raaen
-   
+
 
 .. autosummary::
    :toctree: generated
