@@ -3,9 +3,8 @@
 A login is required to access the HPC cluster of the University.
 Use your student or employee email address of the university to sign up for the account.
 
-- Fill the [Application Form](https://forms.office.com/e/MafYmYX8tk).
-  Or use the QR code-
-  <img src="images/qr4application.png" alt="image" width="250" height="auto">
+- Fill the [Application Form](https://forms.office.com/e/MafYmYX8tk), or scan the QR code.
+  ![QR code](images/qr2apply.png)
 
 - Feel free to reach out to us via email at `hpc@kristiania.no` to request HPC special access for a project, need additional storage access, or require dedicated execution time on a node.
 
@@ -44,4 +43,4 @@ When operating from a remote location, accessing resources off campus requires s
 - Go to the app and enter ‘saml.kristiania.no’ in the portal address
   4 to 6 same as student.
 
-Notes: Linux user, follow the instruction: https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux.
+Notes: Linux user, follow the [instruction](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux).
