@@ -95,6 +95,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#submitting-a-job">Submitting a Job</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-of-slurm-script">Example of slurm script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#basic-slurm-commands">Basic slurm commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-commands">Module commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loading-module">Loading module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listing-available-modules">Listing available modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unload-all-loaded-modules">Unload all loaded modules</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#for-additional-tutorials">For additional tutorials</a></li>
 </ul>
 </li>
@@ -339,6 +345,40 @@ You can also use the <code class="docutils literal notranslate"><span class="pre
 <p>This will display information about the partitions on the cluster, including the partition name,
 the partition status, and the partition owner.
 You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the jobs running on the cluster::</p>
+</div>
+<div class="section" id="module-commands">
+<h2>Module commands<a class="headerlink" href="#module-commands" title="Permalink to this heading">¶</a></h2>
+<p>We have used <code class="docutils literal notranslate"><span class="pre">Lmod</span></code> and <code class="docutils literal notranslate"><span class="pre">EasyBuild</span></code> in conjunction for module management in HPC environments.
+These tools allow you to easily manage your environment by loading different modules that provide libraries or software packages.</p>
+<div class="section" id="loading-module">
+<h3>Loading module<a class="headerlink" href="#loading-module" title="Permalink to this heading">¶</a></h3>
+<p>Users can load their required libraries or software packages, using the below command-</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="o">&lt;</span><span class="n">package_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For example:-</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">SQLite</span><span class="o">/</span><span class="mf">3.42.0</span><span class="o">-</span><span class="n">GCCcore</span><span class="o">-</span><span class="mf">12.3.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listing-available-modules">
+<h3>Listing available modules<a class="headerlink" href="#listing-available-modules" title="Permalink to this heading">¶</a></h3>
+<p>Both Lmod and EasyBuild provide commands to list available modules. Lmod users typically use module avail, while EasyBuild users use eb –list.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">avail</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eb</span> <span class="o">--</span><span class="nb">list</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unload-all-loaded-modules">
+<h3>Unload all loaded modules<a class="headerlink" href="#unload-all-loaded-modules" title="Permalink to this heading">¶</a></h3>
+<p>If you want to unload all currently loaded modules in an HPC environment, you can use the module purge command. This command removes all currently loaded modules from your environment. Here’s how you can use it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">purge</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="for-additional-tutorials">
 <h2>For additional tutorials<a class="headerlink" href="#for-additional-tutorials" title="Permalink to this heading">¶</a></h2>

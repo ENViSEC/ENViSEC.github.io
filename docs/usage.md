@@ -212,6 +212,47 @@ This will display information about the partitions on the cluster, including the
 the partition status, and the partition owner.
 You can also use the `scontrol` command to view information about the jobs running on the cluster::
 
+## Module commands
+
+We have used `Lmod` and `EasyBuild` in conjunction for module management in HPC environments.
+These tools allow you to easily manage your environment by loading different modules that provide libraries or software packages.
+
+### Loading module
+
+Users can load their required libraries or software packages, using the below command-
+
+```
+module load <package_name>
+```
+
+For example:-
+
+```
+module load SQLite/3.42.0-GCCcore-12.3.0
+```
+
+### Listing available modules
+
+Both Lmod and EasyBuild provide commands to list available modules. Lmod users typically use module avail, while EasyBuild users use eb --list.
+
+```
+module avail
+```
+
+or
+
+```
+eb --list
+```
+
+### Unload all loaded modules
+
+If you want to unload all currently loaded modules in an HPC environment, you can use the module purge command. This command removes all currently loaded modules from your environment. Here's how you can use it:
+
+```
+module purge
+```
+
 ## For additional tutorials
 
 - To gain in-depth knowledge on utilizing an HPC cluster in conjunction with
