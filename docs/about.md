@@ -24,8 +24,7 @@ complex challenges.
   an environment where researchers can share knowledge and expertise to drive interdisciplinary
   projects forward.
 
-- Services and Resources:
-  Powerful Computing Resources: Access to a robust computing infrastructure capable of handling
+- Services and Resources:Access to a robust computing infrastructure capable of handling
   complex simulations, data analyses, and large-scale computations.
 
 - Cutting-Edge Software: Our HPC center is equipped with a rich set of pre-installed software
