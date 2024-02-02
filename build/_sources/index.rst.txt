@@ -5,7 +5,7 @@ Welcome to the HPC cluster!
 ---------------------------
 
 The High Performance Computing (HPC) platform at Kristiania University
-College provides students and researchers with the resources they need
+College provides computing resources to the students and researchers
 to conduct complex experiments in science, engineering and mathematics.
 HPC environments provide significant computational power for scientific
 and data-intensive tasks.
