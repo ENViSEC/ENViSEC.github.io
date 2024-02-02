@@ -1,7 +1,7 @@
 SEIT equipment
 =========================
 
-The following are the additional available equipment in addition to the HPC cluster (see :ref:Hardware) at SEIT, Kristiania. 
+The following are the additional available equipment in addition to the HPC cluster at SEIT, Kristiania. 
 Users interested in utilizing this equipment can request access to the specific equipment from the respective laboratory/center.
 
 **1. SmartSecLab lab equipment**

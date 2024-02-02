@@ -43,7 +43,7 @@ of HPC to propel your research forward.
 ## Kristiania-HPC Team
 
 Kristiania-HPC is a team within the School of Economics, Innovation, and Technology,
-Kristiania Unviersity College, Norway.
+Kristiania University College, Norway.
 
 ### Our team
 
