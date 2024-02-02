@@ -17,7 +17,7 @@ In order to seamlessly utilize resources, whether on or off campus, it is essent
 When physically present within the campus premises and connected to either the `EGMS` or `Student` network, you can effortlessly access High-Performance Computing (HPC) resources. Specifically, a direct Secure Shell (SSH) connection to the HPC login node can be established using the following command:
 
 ```
-ssh <username>@10.10.15.10>
+ssh <username>@<Domain name or IP of HPC>
 ```
 
 Here, the IP address 10.10.15.10 corresponds to the IP/hostname of the HPC login node.
