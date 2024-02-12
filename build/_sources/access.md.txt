@@ -4,6 +4,7 @@ A login is required to access the HPC cluster of the University.
 Use your student or employee email address of the university to sign up for the account.
 
 - Fill the [Application Form](https://nettskjema.no/a/403264), or scan the QR code.
+
   ![QR code](images/qr2apply.png)
   <!-- <img src="images/qr2apply.png" alt="drawing" width="200"/> -->
 
