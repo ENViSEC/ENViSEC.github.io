@@ -3,8 +3,9 @@
 A login is required to access the HPC cluster of the University.
 Use your student or employee email address of the university to sign up for the account.
 
-- Fill the [Application Form](https://forms.office.com/e/MafYmYX8tk), or scan the QR code.
+- Fill the [Application Form](https://nettskjema.no/a/403264), or scan the QR code.
   ![QR code](images/qr2apply.png)
+  <!-- <img src="images/qr2apply.png" alt="drawing" width="200"/> -->
 
 - Feel free to reach out to us via email at `hpc@kristiania.no` to request HPC special access for a project, need additional storage access, or require dedicated execution time on a node.
 
