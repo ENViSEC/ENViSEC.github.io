@@ -299,15 +299,9 @@ You can also use the <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sinfo</span>
 </pre></div>
 </div>
-<p>This will display information about the nodes on the cluster, including the number of nodes,
-the number of CPUs per node, and the number of GPUs per node.
-You can also use the <code class="docutils literal notranslate"><span class="pre">smap</span></code> command to view information about the memory usage on the cluster::</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smap</span>
-</pre></div>
-</div>
 <p>This will display information about the memory usage on the cluster,
 including the total memory, the memory used, and the memory available.
-You can also use the <code class="docutils literal notranslate"><span class="pre">sview</span></code> command to view information about the cluster::</p>
+You can also use the <code class="docutils literal notranslate"><span class="pre">sview</span></code> command to view information about the cluster (to enable this you have to login with <code class="docutils literal notranslate"><span class="pre">-X</span></code> parameter like, <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">&lt;name&gt;&#64;host</span></code>)::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sview</span>
 </pre></div>
 </div>
@@ -330,25 +324,10 @@ You can also use the <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">node</span>
 </pre></div>
 </div>
-<p>This will display information about the nodes on the cluster, including the node name,
-the node status, and the node owner.
-You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the users on the cluster::</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">user</span>
-</pre></div>
-</div>
-<p>This will display information about the users on the cluster, including the user name,
-the user status, and the user owner.
-You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the partitions on the cluster::</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scontrol</span> <span class="n">show</span> <span class="n">partition</span>
-</pre></div>
-</div>
-<p>This will display information about the partitions on the cluster, including the partition name,
-the partition status, and the partition owner.
-You can also use the <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command to view information about the jobs running on the cluster::</p>
 </div>
 <div class="section" id="module-commands">
 <h2>Module commands<a class="headerlink" href="#module-commands" title="Permalink to this heading">¶</a></h2>
-<p>We have used <code class="docutils literal notranslate"><span class="pre">Lmod</span></code> and <code class="docutils literal notranslate"><span class="pre">EasyBuild</span></code> in conjunction for module management in HPC environments.
+<p>We have used <code class="docutils literal notranslate"><span class="pre">Lmod</span></code> and <code class="docutils literal notranslate"><span class="pre">Spack</span></code> in conjunction for module management in HPC environments.
 These tools allow you to easily manage your environment by loading different modules that provide libraries or software packages.</p>
 <div class="section" id="loading-module">
 <h3>Loading module<a class="headerlink" href="#loading-module" title="Permalink to this heading">¶</a></h3>
@@ -365,10 +344,6 @@ These tools allow you to easily manage your environment by loading different mod
 <h3>Listing available modules<a class="headerlink" href="#listing-available-modules" title="Permalink to this heading">¶</a></h3>
 <p>Both Lmod and EasyBuild provide commands to list available modules. Lmod users typically use module avail, while EasyBuild users use eb –list.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">avail</span>
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eb</span> <span class="o">--</span><span class="nb">list</span>
 </pre></div>
 </div>
 </div>

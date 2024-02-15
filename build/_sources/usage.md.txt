@@ -151,17 +151,9 @@ You can also use the `sinfo` command to view information about the nodes on the 
 sinfo
 ```
 
-This will display information about the nodes on the cluster, including the number of nodes,
-the number of CPUs per node, and the number of GPUs per node.
-You can also use the `smap` command to view information about the memory usage on the cluster::
-
-```
-smap
-```
-
 This will display information about the memory usage on the cluster,
 including the total memory, the memory used, and the memory available.
-You can also use the `sview` command to view information about the cluster::
+You can also use the `sview` command to view information about the cluster (to enable this you have to login with `-X` parameter like, `ssh -X <name>@host`)::
 
 ```
 sview
@@ -192,29 +184,9 @@ You can also use the `scontrol` command to view information about the nodes on t
 scontrol show node
 ```
 
-This will display information about the nodes on the cluster, including the node name,
-the node status, and the node owner.
-You can also use the `scontrol` command to view information about the users on the cluster::
-
-```
-scontrol show user
-```
-
-This will display information about the users on the cluster, including the user name,
-the user status, and the user owner.
-You can also use the `scontrol` command to view information about the partitions on the cluster::
-
-```
-scontrol show partition
-```
-
-This will display information about the partitions on the cluster, including the partition name,
-the partition status, and the partition owner.
-You can also use the `scontrol` command to view information about the jobs running on the cluster::
-
 ## Module commands
 
-We have used `Lmod` and `EasyBuild` in conjunction for module management in HPC environments.
+We have used `Lmod` and `Spack` in conjunction for module management in HPC environments.
 These tools allow you to easily manage your environment by loading different modules that provide libraries or software packages.
 
 ### Loading module
@@ -237,12 +209,6 @@ Both Lmod and EasyBuild provide commands to list available modules. Lmod users t
 
 ```
 module avail
-```
-
-or
-
-```
-eb --list
 ```
 
 ### Unload all loaded modules
