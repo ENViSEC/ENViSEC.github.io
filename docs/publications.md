@@ -8,4 +8,6 @@ If you publish research utilizing the Kristiania-HPC infrastructure, kindly info
 
 ## Research Papers
 
-- TBA
+### 2024
+
+> Guru Prasad Bhandari, Gebremariam Assres, Nikola Gavric, Andrii Shalaginov & Tor-Morten Grønli, IoTvulCode: AI-enabled vulnerability detection in software products designed for IoT applications, International Journal of Information Security, 2024, https://doi.org/10.1007/s10207-024-00848-6, [Source Code: https://github.com/SmartSecLab/IoTvulCode and Data: https://zenodo.org/records/10573928].
