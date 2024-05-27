@@ -22,27 +22,26 @@ When physically present within the campus premises and connected to either the `
 ssh <username>@<Domain name or IP of HPC>
 ```
 
-Here, the IP address 10.10.15.10 corresponds to the IP/hostname of the HPC login node.
+Here, the IP address or domain name corresponds to the IP/hostname of the HPC login node.
 
 ### Off-Campus Connectivity
 
 When operating from a remote location, accessing resources off campus requires specific procedures. Here are the guidelines for both students and employees:The off-campus VPN (Virtual Private Network) provides secure connectivity from anywhere in the world. To use this service:
 
-**For students:**
+**For students (follow the instruction - [link](https://www.kristiania.no/en/for-students/it-support/vpn/)):**
 
-- Follow https://www.kristiania.no/en/for-students/it-support/vpn/
-- Go to https://vpnstudent.kristiania.no
-- Download and install ‘global protect’ app
-- Go to the app and enter ‘vpnstudent.kristiania.no’ in the portal address
-  Click ‘connect’
-- Enter username and password and login
-- Done!
+- Visit `https://vpnstudent.kristiania.no`,
+- Download and install ‘global protect’ app,
+- Go to the app and enter `vpnstudent.kristiania.no` in the portal address,
+- Click ‘connect’ and enter username and password to login,
+- Connected!
 
-**For employee (PhD too):**
+**For employees and PhD students (follow the instruction - [link](https://www.kristiania.no/for-ansatte/it/vpn-ansatt/)):**
 
-- follow https://www.kristiania.no/for-ansatte/it/vpn-ansatt/
-- Download and install ‘global protect’ app
-- Go to the app and enter ‘saml.kristiania.no’ in the portal address
-  4 to 6 same as student.
+- Visit `saml-intern.kristiania.no`,
+- Download and install `global protect` app,
+- Open the app and enter `saml-intern.kristiania.no` in the portal address,
+- Click ‘connect’ and enter username and password to login,
+- Connected!
 
-Notes: Linux user, follow the [instruction](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux).
+Notes: Linux user, follow the instruction - [link](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux).
