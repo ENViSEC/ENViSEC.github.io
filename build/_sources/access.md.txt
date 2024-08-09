@@ -44,4 +44,4 @@ When operating from a remote location, accessing resources off campus requires s
 - Click ‘connect’ and enter username and password to login,
 - Connected!
 
-Notes: Linux user, follow the instruction - [link](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux).
+Notes: Linux user, follow the instruction - [link](https://github.com/yuezk/GlobalProtect-openconnect). Use the same portal address for the linux.
