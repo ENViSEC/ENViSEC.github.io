@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Statistical software &mdash; Kristiania-HPC 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Publications" href="publications.html" />
+    <link rel="prev" title="SEIT equipment" href="equipment.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Kristiania-HPC
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="specification.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access.html">Apply Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipment.html">SEIT equipment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Statistical software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-software-on-hpc-via-ssh">Accessing Software on HPC via SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-stata-on-hpc">2. Accessing Stata on HPC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-stata-on-the-hpc-login-node">Install Stata on the HPC Login Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-stata">Launch Stata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forward-gui-for-stata-optional">Forward GUI for Stata (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-rstudio-on-hpc">1. Accessing RStudio on HPC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-ssh-tunnel-for-rstudio">Set Up SSH Tunnel for RStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-rstudio-in-your-browser">Access RStudio in Your Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mounting-hpc-storage-to-your-local-system">3. Mounting HPC Storage to Your Local System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alternative-to-3-accessing-remote-folders-using-vs-code">4. [Alternative to 3] Accessing Remote Folders Using <code class="docutils literal notranslate"><span class="pre">VS</span> <span class="pre">Code</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#steps-to-configure">Steps to Configure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kristiania-HPC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Statistical software</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/stat-tool.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="statistical-software">
+<h1>Statistical software<a class="headerlink" href="#statistical-software" title="Permalink to this heading">¶</a></h1>
+<div class="section" id="accessing-software-on-hpc-via-ssh">
+<h2>Accessing Software on HPC via SSH<a class="headerlink" href="#accessing-software-on-hpc-via-ssh" title="Permalink to this heading">¶</a></h2>
+<p>This guide provides instructions for accessing RStudio and Stata on an Kristiania-HPC cluster using SSH.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="accessing-stata-on-hpc">
+<h2>2. Accessing Stata on HPC<a class="headerlink" href="#accessing-stata-on-hpc" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="install-stata-on-the-hpc-login-node">
+<h3>Install Stata on the HPC Login Node<a class="headerlink" href="#install-stata-on-the-hpc-login-node" title="Permalink to this heading">¶</a></h3>
+<p>Log in to the HPC cluster via SSH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@hpc_server_ip
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-stata">
+<h3>Launch Stata<a class="headerlink" href="#launch-stata" title="Permalink to this heading">¶</a></h3>
+<p>To run Stata in interactive mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>stata
+</pre></div>
+</div>
+<p>To run Stata in batch mode, create a <code class="docutils literal notranslate"><span class="pre">.do</span></code> file and execute it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>stata<span class="w"> </span>-b<span class="w"> </span><span class="k">do</span><span class="w"> </span>script.do
+</pre></div>
+</div>
+<p>This will execute the commands in <code class="docutils literal notranslate"><span class="pre">script.do</span></code> and save the output to <code class="docutils literal notranslate"><span class="pre">script.log</span></code>.</p>
+</div>
+<div class="section" id="forward-gui-for-stata-optional">
+<h3>Forward GUI for Stata (Optional)<a class="headerlink" href="#forward-gui-for-stata-optional" title="Permalink to this heading">¶</a></h3>
+<p>If you want to use Stata’s graphical interface, enable X11 forwarding:</p>
+<ol class="arabic">
+<li><p>Install an X server on your local machine:</p>
+<ul class="simple">
+<li><p><strong>For macOS:</strong> Install <a class="reference external" href="https://www.xquartz.org/">XQuartz</a>.</p></li>
+<li><p><strong>For Windows:</strong> Use an SSH client with X11 support, such as <a class="reference external" href="https://mobaxterm.mobatek.net/">MobaXterm</a> or <a class="reference external" href="https://sourceforge.net/projects/xming/">Xming</a>.</p></li>
+<li><p><strong>For Linux:</strong> Ensure <code class="docutils literal notranslate"><span class="pre">xauth</span></code> and an X server (e.g., <code class="docutils literal notranslate"><span class="pre">xorg</span></code>) are installed.</p></li>
+</ul>
+</li>
+<li><p>Connect to the HPC with X11 forwarding:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-X<span class="w"> </span>username@hpc_server_ip
+</pre></div>
+</div>
+</li>
+<li><p>Launch Stata GUI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xstata
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="accessing-rstudio-on-hpc">
+<h2>1. Accessing RStudio on HPC<a class="headerlink" href="#accessing-rstudio-on-hpc" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="set-up-ssh-tunnel-for-rstudio">
+<h3>Set Up SSH Tunnel for RStudio<a class="headerlink" href="#set-up-ssh-tunnel-for-rstudio" title="Permalink to this heading">¶</a></h3>
+<p>To securely access RStudio Server, create an SSH tunnel:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">8787</span>:localhost:8787<span class="w"> </span>username@hpc_server_ip
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">username</span></code> with your HPC username.</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">hpc_server_ip</span></code> with the HPC cluster’s IP address.</p></li>
+</ul>
+<p>This forwards the HPC’s RStudio port (<code class="docutils literal notranslate"><span class="pre">8787</span></code>) to your local machine.</p>
+</div>
+<div class="section" id="access-rstudio-in-your-browser">
+<h3>Access RStudio in Your Browser<a class="headerlink" href="#access-rstudio-in-your-browser" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Open a web browser on your local machine.</p></li>
+<li><p>Navigate to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8787</span>
+</pre></div>
+</div>
+</li>
+<li><p>Log in using your HPC credentials.</p></li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="mounting-hpc-storage-to-your-local-system">
+<h2>3. Mounting HPC Storage to Your Local System<a class="headerlink" href="#mounting-hpc-storage-to-your-local-system" title="Permalink to this heading">¶</a></h2>
+<p>You can mount HPC storage to your local system for easy file access.</p>
+<div class="section" id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Install <strong>macFUSE</strong>:</p>
+<ul class="simple">
+<li><p>Download and install from <a class="reference external" href="https://osxfuse.github.io/">macFUSE</a>.</p></li>
+</ul>
+</li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">sshfs</span></code> to mount the HPC storage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>sshfs
+mkdir<span class="w"> </span>~/hpc_mount
+sshfs<span class="w"> </span>username@hpc_server_ip:/path/to/hpc/storage<span class="w"> </span>~/hpc_mount
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Install <strong>WinFsp</strong> and <strong>SSHFS-Win</strong>:</p>
+<ul class="simple">
+<li><p>Download and install from <a class="reference external" href="https://github.com/winfsp/winfsp">WinFsp</a> and <a class="reference external" href="https://github.com/billziss-gh/sshfs-win/releases">SSHFS-Win</a>.</p></li>
+</ul>
+</li>
+<li><p>Mount the HPC storage using File Explorer:</p>
+<ul>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">PC</span></code>, click <code class="docutils literal notranslate"><span class="pre">Map</span> <span class="pre">Network</span> <span class="pre">Drive</span></code>, and use the address:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">sshfs</span>\<span class="n">username</span><span class="nd">@hpc_server_ip</span>\<span class="n">path</span>\<span class="n">to</span>\<span class="n">hpc</span>\<span class="n">storage</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">sshfs</span></code> is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sshfs
+</pre></div>
+</div>
+</li>
+<li><p>Mount the HPC storage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/hpc_mount
+sshfs<span class="w"> </span>username@hpc_server_ip:/path/to/hpc/storage<span class="w"> </span>~/hpc_mount
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="alternative-to-3-accessing-remote-folders-using-vs-code">
+<h2>4. [Alternative to 3] Accessing Remote Folders Using <code class="docutils literal notranslate"><span class="pre">VS</span> <span class="pre">Code</span></code><a class="headerlink" href="#alternative-to-3-accessing-remote-folders-using-vs-code" title="Permalink to this heading">¶</a></h2>
+<p>You can use Visual Studio Code’s Remote - SSH extension to access HPC remote folders seamlessly.</p>
+<div class="section" id="steps-to-configure">
+<h3>Steps to Configure<a class="headerlink" href="#steps-to-configure" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Install VS Code:</strong></p>
+<ul class="simple">
+<li><p>Download and install Visual Studio Code from <a class="reference external" href="https://code.visualstudio.com/">code.visualstudio.com</a>.</p></li>
+</ul>
+</li>
+<li><p><strong>Install the Remote - SSH Extension:</strong></p>
+<ul class="simple">
+<li><p>Open VS Code.</p></li>
+<li><p>Go to the Extensions view (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+X</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Shift+X</span></code> on macOS).</p></li>
+<li><p>Search for “Remote - SSH” and install the extension.</p></li>
+</ul>
+</li>
+<li><p><strong>Configure SSH in VS Code:</strong></p>
+<ul>
+<li><p>Open the Command Palette (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Shift+P</span></code> on macOS).</p></li>
+<li><p>Type “Remote-SSH: Add New SSH Host” and select it.</p></li>
+<li><p>Enter the SSH command to connect to the HPC, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">username</span><span class="nd">@hpc_server_ip</span>
+</pre></div>
+</div>
+</li>
+<li><p>Choose the SSH configuration file where this should be saved (usually <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Connect to the HPC:</strong></p>
+<ul class="simple">
+<li><p>Open the Command Palette.</p></li>
+<li><p>Type “Remote-SSH: Connect to Host” and select your HPC entry.</p></li>
+<li><p>A new VS Code window will open, connected to the HPC.</p></li>
+</ul>
+</li>
+<li><p><strong>Access Remote Folders:</strong></p>
+<ul class="simple">
+<li><p>In the new window, use the File Explorer to browse and edit remote files.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>For assistance, contact your HPC system administrator.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="publications.html" class="btn btn-neutral float-right" title="Publications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="equipment.html" class="btn btn-neutral float-left" title="SEIT equipment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2024, SEIT, Kristiania University College.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

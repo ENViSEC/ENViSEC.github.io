@@ -38,6 +38,7 @@ HPC usage using Slurm.
     storage
     access
     equipment
+    stat-tool
     publications
     support
     about
