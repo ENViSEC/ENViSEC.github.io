@@ -1,12 +1,10 @@
 # Statistical software
 
-## Accessing Software on HPC via SSH
-
-This guide provides instructions for accessing RStudio and Stata on an Kristiania-HPC cluster using SSH.
+This documentation page provides a comprehensive guide on how to use the software installed on our Kristiania-HPC. It also includes instructions for accessing the software on a Kristiania-HPC cluster via SSH.
 
 ---
 
-## 2. Accessing Stata on HPC
+## 1. Accessing Stata on HPC
 
 ### SSH login
 
@@ -55,7 +53,7 @@ If you want to use Stata's graphical interface, enable X11 forwarding:
 
 ---
 
-## 1. Accessing RStudio on HPC
+## 2. Accessing RStudio on HPC
 
 ### Set Up SSH Tunnel for RStudio
 
@@ -158,3 +156,8 @@ You can use Visual Studio Code's Remote - SSH extension to access HPC remote fol
 ---
 
 For assistance, contact your HPC system administrator.
+
+```{eval-rst}
+.. autosummary::
+    :toctree: generated
+```
