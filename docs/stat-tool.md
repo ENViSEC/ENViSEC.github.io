@@ -81,7 +81,7 @@ This forwards the HPC's RStudio port (`8787`) to your local machine.
 
 ---
 
-## 3. Mounting HPC Storage to Your Local System
+## 3. [Optional] Mounting HPC Storage to Your Local System
 
 You can mount HPC storage to your local system for easy file access.
 
