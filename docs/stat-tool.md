@@ -8,7 +8,7 @@ This guide provides instructions for accessing RStudio and Stata on an Kristiani
 
 ## 2. Accessing Stata on HPC
 
-### Install Stata on the HPC Login Node
+### SSH login
 
 Log in to the HPC cluster via SSH:
 
